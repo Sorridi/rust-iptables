@@ -257,7 +257,7 @@ impl IPTables {
 
     /// Lists rules in the table/chain.
     pub fn list(&self, table: &str, chain: &str) -> IPTResult<Vec<String>> {
-        self.get_list(&["-t", table, "-S", chain])
+        self.get_list(&["-t", table, "-S", chain, "-v"])
     }
 
     /// Lists rules in the table.
